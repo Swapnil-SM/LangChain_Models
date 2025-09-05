@@ -23,7 +23,7 @@ query_embedding = embedding.embed_query(query)
 
 scores = cosine_similarity([query_embedding], doc_embeddings)[0] #this is a 2d list so to get 1d list we use [0]
 
-index, score = sorted(list(enumerate(scores)),key=lambda x:x[1])[-1]
+index, score = sorted(list(enumerate(scores)),key=lambda x:x[1])[-1] #enumerate gives index and score both
 
 print(query)
 print(documents[index])
